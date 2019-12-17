@@ -1,0 +1,10 @@
+python_dateutil >= 2.6.0
+setuptools >= 21.0.0
+six
+python-dotenv
+psycopg2
+SQLAlchemy
+databases
+asyncpg
+fastapi
+uvicorn
