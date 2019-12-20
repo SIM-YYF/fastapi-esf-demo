@@ -5,6 +5,7 @@ python-dotenv
 psycopg2
 SQLAlchemy
 databases
+sqlalchemy-utils
 asyncpg
 fastapi
 uvicorn

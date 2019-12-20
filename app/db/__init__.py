@@ -1,11 +1,15 @@
 # SQLAlchemy specific code, as with any other app
 import databases
 import sqlalchemy
+from sqlalchemy_utils import database_exists, create_database
+
 
 DATABASE_URL = "postgresql://postgres:postgres@localhost:5433/esf"
 
-database = databases.Database(DATABASE_URL)
+if not database_exists(DATABASE_URL):
+    create_database(DATABASE_URL)
 
+database = databases.Database(DATABASE_URL)
 metadata = sqlalchemy.MetaData()
 
 users = sqlalchemy.Table(
